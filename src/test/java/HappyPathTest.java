@@ -11,6 +11,9 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
+
+import java.lang.reflect.Array;
+
 import static org.hamcrest.Matchers.*;
 public class HappyPathTest {
 
@@ -30,14 +33,17 @@ public class HappyPathTest {
     @Test (priority = 0)
     void PostCreateUser() {
 
-        ExtentTest test = extent.createTest("Status Code 201 when creating a user");
+        ExtentTest test = extent.createTest("Status Code 201 when creating a user")
+                .assignAuthor("Diego").assignCategory("Account Creation");
+
+
 
         try{
         UserConfig.UserID = given()
                 .contentType("application/json")
                 .body("{\"userName\": \"" + UserConfig.UserName + "\", \"password\": \"" + UserConfig.Password + "\"}")
                 .when()
-                .post("https://bookstore.toolsqa.com/Account/v1/User")
+                .post(UserConfig.ACCOUNTURL+"User")
                 .then()
                 .statusCode(201)
                 .extract().jsonPath().getString("userID");
@@ -57,7 +63,8 @@ public class HappyPathTest {
 
     @Test(priority = 1)
     void PostUserUnauthorized() {
-        ExtentTest test = extent.createTest("Status code 200 when asking if the user is unauthorized");
+        ExtentTest test = extent.createTest("Status code 200 when asking if the user is unauthorized")
+                .assignAuthor("Nicolas").assignCategory("User Unauthorized");
 
         try {
             // Your test logic
@@ -65,7 +72,7 @@ public class HappyPathTest {
                     .contentType("application/json")
                     .body("{\"userName\": \"" + UserConfig.UserName + "\", \"password\": \"" + UserConfig.Password + "\"}")
                     .when()
-                    .post("https://bookstore.toolsqa.com/Account/v1/Authorized")
+                    .post(UserConfig.ACCOUNTURL+"Authorized")
                     .then()
                     .statusCode(200)
                     .and()
@@ -87,14 +94,16 @@ public class HappyPathTest {
 
     @Test (priority = 3)
     void PostGenerateToken() {
-        ExtentTest test = extent.createTest("Status code 200 when generating the token");
+        ExtentTest test = extent.createTest("Status code 200 when generating the token")
+                .assignAuthor("Diego").assignCategory("Token Generation");
+        ;
 
         UserConfig.Token = null;
         var x = given()
                     .contentType("application/json")
                     .body("{\"userName\": \"" + UserConfig.UserName + "\", \"password\": \"" + UserConfig.Password + "\"}")
                 .when()
-                    .post("https://bookstore.toolsqa.com/Account/v1/GenerateToken")
+                    .post(UserConfig.ACCOUNTURL + "GenerateToken")
                 .then();
         try {
             x.statusCode(201);
@@ -112,14 +121,16 @@ public class HappyPathTest {
     }
     @Test (priority = 4)
     void PostUserAuthorized(){
-            ExtentTest test = extent.createTest("Status code 200 when asking if user is Authorized");
+            ExtentTest test = extent.createTest("Status code 200 when asking if user is Authorized")
+                    .assignAuthor("Nicolas").assignCategory("User Authorized");
+        ;
 
             try {
         given()
                 .contentType("application/json")
                 .body("{\"userName\": \"" + UserConfig.UserName + "\", \"password\": \"" + UserConfig.Password + "\"}")
                 .when()
-                .post("https://bookstore.toolsqa.com/Account/v1/Authorized")
+                .post(UserConfig.ACCOUNTURL+"Authorized")
                 .then()
                 .statusCode(200)
                 .and()
@@ -136,13 +147,15 @@ public class HappyPathTest {
     }
     @Test (priority = 5)
     void GetUserAuthorized(){
-        ExtentTest test = extent.createTest("Status code 200 when getting a user");
+        ExtentTest test = extent.createTest("Status code 200 when getting a user")
+                .assignAuthor("Diego").assignCategory("Get User Info");
+        ;
 
         try {
         given().contentType("application/json")
                 .header("Authorization", "Bearer " + UserConfig.Token)
                 .when()
-                .get("https://bookstore.toolsqa.com/Account/v1/User/" + UserConfig.UserID)
+                .get(UserConfig.ACCOUNTURL + "User/" + UserConfig.UserID)
                 .then()
                 .statusCode(200);
             test.log(Status.PASS, "Test Passed!");
@@ -156,13 +169,15 @@ public class HappyPathTest {
     }
     @Test (priority = 6)
     void DeleteUserAuthorized(){
-        ExtentTest test = extent.createTest("Status code 204 when deleting a user");
+        ExtentTest test = extent.createTest("Status code 204 when deleting a user")
+                .assignAuthor("Nicolas").assignCategory("Delete User");
+        ;
 
         try {
         given().contentType("application/json")
                 .header("Authorization", "Bearer " + UserConfig.Token)
                 .when()
-                .delete("https://bookstore.toolsqa.com/Account/v1/User/" + UserConfig.UserID)
+                .delete(UserConfig.ACCOUNTURL + "User/" + UserConfig.UserID)
                 .then()
                 .statusCode(204);
             test.log(Status.PASS, "Test Passed!");

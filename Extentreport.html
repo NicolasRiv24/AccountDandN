@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 5, 2023 12:18:38 PM</span></a>
+<a href="#"><span class="badge badge-primary">Dec 5, 2023 02:56:17 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,16 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -72,17 +82,29 @@
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
 </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Nicolas</a><a class="dropdown-item" href="#">Diego</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">UserAuthorized</a><a class="dropdown-item" href="#">UserUnauthorized</a><a class="dropdown-item" href="#">AccountCreation</a><a class="dropdown-item" href="#">GetUserInfo</a><a class="dropdown-item" href="#">TokenGeneration</a><a class="dropdown-item" href="#">DeleteUser</a>
+</ul>
+</li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
         <li class="test-item"  status="pass" test-id="1"
-          author=""
-          tag=""
+          author="Diego"
+          tag="AccountCreation"
           device="">
           <div class="test-detail">
             <p class="name">Status Code 201 when creating a user</p>
             <p class="text-sm">
-              <span>12:18:39 PM</span> / <span>00:00:02:649</span>
+              <span>2:56:17 PM</span> / <span>00:00:02:438</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -91,14 +113,16 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Status Code 201 when creating a user</h5>
-<span class='badge badge-success'>12.05.2023 12:18:39 PM</span>
-<span class='badge badge-danger'>12.05.2023 12:18:41 PM</span>
-<span class='badge badge-default'>00:00:02:649</span>
+<span class='badge badge-success'>12.05.2023 2:56:17 PM</span>
+<span class='badge badge-danger'>12.05.2023 2:56:20 PM</span>
+<span class='badge badge-default'>00:00:02:438</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Diego</span>
+<span class="badge badge-pill badge-default">AccountCreation</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -106,7 +130,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:18:41 PM</td>
+        <td>2:56:20 PM</td>
         <td>
           Test Passed!
         </td>
@@ -117,13 +141,13 @@
           </div>
         </li>
         <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
+          author="Nicolas"
+          tag="UserUnauthorized"
           device="">
           <div class="test-detail">
             <p class="name">Status code 200 when asking if the user is unauthorized</p>
             <p class="text-sm">
-              <span>12:18:41 PM</span> / <span>00:00:00:719</span>
+              <span>2:56:20 PM</span> / <span>00:00:00:699</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -132,14 +156,16 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Status code 200 when asking if the user is unauthorized</h5>
-<span class='badge badge-success'>12.05.2023 12:18:41 PM</span>
-<span class='badge badge-danger'>12.05.2023 12:18:42 PM</span>
-<span class='badge badge-default'>00:00:00:719</span>
+<span class='badge badge-success'>12.05.2023 2:56:20 PM</span>
+<span class='badge badge-danger'>12.05.2023 2:56:21 PM</span>
+<span class='badge badge-default'>00:00:00:699</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Nicolas</span>
+<span class="badge badge-pill badge-default">UserUnauthorized</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -147,7 +173,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:18:42 PM</td>
+        <td>2:56:21 PM</td>
         <td>
           Test Passed!
         </td>
@@ -158,13 +184,13 @@
           </div>
         </li>
         <li class="test-item"  status="fail" test-id="3"
-          author=""
-          tag=""
+          author="Diego"
+          tag="TokenGeneration"
           device="">
           <div class="test-detail">
             <p class="name">Status code 200 when generating the token</p>
             <p class="text-sm">
-              <span>12:18:42 PM</span> / <span>00:00:00:927</span>
+              <span>2:56:21 PM</span> / <span>00:00:00:900</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -173,14 +199,18 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Status code 200 when generating the token</h5>
-<span class='badge badge-success'>12.05.2023 12:18:42 PM</span>
-<span class='badge badge-danger'>12.05.2023 12:18:43 PM</span>
-<span class='badge badge-default'>00:00:00:927</span>
+
+<span class='badge badge-success'>12.05.2023 2:56:21 PM</span>
+<span class='badge badge-danger'>12.05.2023 2:56:21 PM</span>
+<span class='badge badge-default'>00:00:00:900</span>
+
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Diego</span>
+<span class="badge badge-pill badge-default">TokenGeneration</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -188,14 +218,14 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>12:18:43 PM</td>
+        <td>2:56:21 PM</td>
         <td>
           Test Failed!
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>12:18:43 PM</td>
+        <td>2:56:21 PM</td>
         <td>
           Exception details: 1 expectation failed.
 Expected status code <201> but was <200>.
@@ -208,13 +238,13 @@ Expected status code <201> but was <200>.
           </div>
         </li>
         <li class="test-item"  status="pass" test-id="4"
-          author=""
-          tag=""
+          author="Nicolas"
+          tag="UserAuthorized"
           device="">
           <div class="test-detail">
             <p class="name">Status code 200 when asking if user is Authorized</p>
             <p class="text-sm">
-              <span>12:18:43 PM</span> / <span>00:00:00:688</span>
+              <span>2:56:21 PM</span> / <span>00:00:00:635</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -223,14 +253,16 @@ Expected status code <201> but was <200>.
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Status code 200 when asking if user is Authorized</h5>
-<span class='badge badge-success'>12.05.2023 12:18:43 PM</span>
-<span class='badge badge-danger'>12.05.2023 12:18:44 PM</span>
-<span class='badge badge-default'>00:00:00:688</span>
+<span class='badge badge-success'>12.05.2023 2:56:21 PM</span>
+<span class='badge badge-danger'>12.05.2023 2:56:22 PM</span>
+<span class='badge badge-default'>00:00:00:635</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Nicolas</span>
+<span class="badge badge-pill badge-default">UserAuthorized</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -238,7 +270,7 @@ Expected status code <201> but was <200>.
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:18:44 PM</td>
+        <td>2:56:22 PM</td>
         <td>
           Test Passed!
         </td>
@@ -249,13 +281,13 @@ Expected status code <201> but was <200>.
           </div>
         </li>
         <li class="test-item"  status="pass" test-id="5"
-          author=""
-          tag=""
+          author="Diego"
+          tag="GetUserInfo"
           device="">
           <div class="test-detail">
             <p class="name">Status code 200 when getting a user</p>
             <p class="text-sm">
-              <span>12:18:44 PM</span> / <span>00:00:00:662</span>
+              <span>2:56:22 PM</span> / <span>00:00:00:669</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -264,14 +296,16 @@ Expected status code <201> but was <200>.
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Status code 200 when getting a user</h5>
-<span class='badge badge-success'>12.05.2023 12:18:44 PM</span>
-<span class='badge badge-danger'>12.05.2023 12:18:44 PM</span>
-<span class='badge badge-default'>00:00:00:662</span>
+<span class='badge badge-success'>12.05.2023 2:56:22 PM</span>
+<span class='badge badge-danger'>12.05.2023 2:56:23 PM</span>
+<span class='badge badge-default'>00:00:00:669</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Diego</span>
+<span class="badge badge-pill badge-default">GetUserInfo</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -279,7 +313,7 @@ Expected status code <201> but was <200>.
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:18:44 PM</td>
+        <td>2:56:23 PM</td>
         <td>
           Test Passed!
         </td>
@@ -290,13 +324,13 @@ Expected status code <201> but was <200>.
           </div>
         </li>
         <li class="test-item"  status="pass" test-id="6"
-          author=""
-          tag=""
+          author="Nicolas"
+          tag="DeleteUser"
           device="">
           <div class="test-detail">
             <p class="name">Status code 204 when deleting a user</p>
             <p class="text-sm">
-              <span>12:18:44 PM</span> / <span>00:00:00:759</span>
+              <span>2:56:23 PM</span> / <span>00:00:00:755</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -305,14 +339,16 @@ Expected status code <201> but was <200>.
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Status code 204 when deleting a user</h5>
-<span class='badge badge-success'>12.05.2023 12:18:44 PM</span>
-<span class='badge badge-danger'>12.05.2023 12:18:45 PM</span>
-<span class='badge badge-default'>00:00:00:759</span>
+<span class='badge badge-success'>12.05.2023 2:56:23 PM</span>
+<span class='badge badge-danger'>12.05.2023 2:56:23 PM</span>
+<span class='badge badge-default'>00:00:00:755</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Nicolas</span>
+<span class="badge badge-pill badge-default">DeleteUser</span></div>
 </div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
@@ -320,7 +356,7 @@ Expected status code <201> but was <200>.
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:18:45 PM</td>
+        <td>2:56:23 PM</td>
         <td>
           Test Passed!
         </td>
@@ -339,18 +375,344 @@ Expected status code <201> but was <200>.
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">6</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">UserAuthorized</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>UserAuthorized</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Status code 200 when asking if user is Authorized</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">UserUnauthorized</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>UserUnauthorized</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Status code 200 when asking if the user is unauthorized</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">AccountCreation</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>AccountCreation</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Status Code 201 when creating a user</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">GetUserInfo</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>GetUserInfo</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>Status code 200 when getting a user</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">TokenGeneration</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>TokenGeneration</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:56:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>Status code 200 when generating the token</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">DeleteUser</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>DeleteUser</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>Status code 204 when deleting a user</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">Nicolas</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Nicolas</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Status code 200 when asking if the user is unauthorized</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Status code 200 when asking if user is Authorized</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>Status code 204 when deleting a user</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">Diego</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Diego</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Status Code 201 when creating a user</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:56:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>Status code 200 when generating the token</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>Status code 200 when getting a user</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 5, 2023 12:18:38 PM</h3>
+<h3>Dec 5, 2023 02:56:17 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 5, 2023 12:18:45 PM</h3>
+<h3>Dec 5, 2023 02:56:23 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -420,10 +782,93 @@ Expected status code <201> but was <200>.
 </div></div>
 <script>
 var timeline = {
-"Status Code 201 when creating a user":2.649,"Status code 200 when asking if the user is unauthorized":0.719,"Status code 200 when generating the token":0.927,"Status code 200 when asking if user is Authorized":0.688,"Status code 200 when getting a user":0.662,"Status code 204 when deleting a user":0.759
+"Status Code 201 when creating a user":2.438,"Status code 200 when asking if the user is unauthorized":0.699,"Status code 200 when generating the token":0.9,"Status code 200 when asking if user is Authorized":0.635,"Status code 200 when getting a user":0.669,"Status code 204 when deleting a user":0.755
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>Nicolas</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Diego</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>66.667%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>UserAuthorized</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>UserUnauthorized</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>AccountCreation</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>GetUserInfo</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>TokenGeneration</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>DeleteUser</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 </div>
 </div>
 <script>
